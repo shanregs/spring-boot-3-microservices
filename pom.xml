@@ -8,24 +8,16 @@
         <version>3.5.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.shan.sb.grpc</groupId>
+    <groupId>com.shan.sb.ms</groupId>
     <artifactId>spring-boot-3-microservices</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>spring-boot-3-microservices</name>
     <description>spring-boot-3-microservices</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+    <modules>
+        <module>product-service</module>
+
+    </modules>
     <properties>
         <java.version>17</java.version>
     </properties>

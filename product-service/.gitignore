@@ -12,10 +12,9 @@ target/
 .settings
 .springBeans
 .sts4-cache
-spring-boot-3-microservices.iml
+
 ### IntelliJ IDEA ###
 .idea
-#.mvn
 *.iws
 *.iml
 *.ipr
