@@ -1,5 +1,6 @@
 package com.shan.sb.ms.orderservice;
 
+import com.shan.sb.ms.orderservice.stubs.InventoryStubs;
 import io.restassured.RestAssured;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.context.annotation.Import;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.junit.jupiter.Container;
@@ -17,6 +19,7 @@ import java.time.Duration;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
+@AutoConfigureWireMock(port = 0)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class OrderServiceApplicationTests {
 	@Container
@@ -28,6 +31,9 @@ class OrderServiceApplicationTests {
 			.withReuse(true)
 			.withStartupTimeout(Duration.ofSeconds(120));
 
+	static {
+		mysqlContainer.start();
+	}
 	@LocalServerPort
 	private int randomPort;
 
@@ -39,6 +45,7 @@ class OrderServiceApplicationTests {
 	@Test
 	void shouldSubmitOrder() {
 		String submitOrderJson = createOrder();
+		InventoryStubs.stubInventoryCall("iphone_15", 1);
 		var responseBodyString = RestAssured.given()
 				.contentType("application/json")
 				.body(submitOrderJson).when().post("/api/order")

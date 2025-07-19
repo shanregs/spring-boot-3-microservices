@@ -1,0 +1,33 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: order-service
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3336/order_service
+    username: root
+    password: mysql
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+inventory:
+  check:
+    endpoint: /api/inventory
+  url: http://localhost:8082
+
+#spring.application.name=order-service
+#
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.datasource.url=jdbc:mysql://localhost:3336/order_service
+#spring.datasource.username=root
+#spring.datasource.password=mysql
+#spring.jpa.hibernate.ddl-auto=none
+#server.port=8081
+#
+#inventory.url = http://localhost:8082
+
+#inventory.check.endpoint = "/api/inventory"
