@@ -15,11 +15,17 @@
     <name>spring-boot-3-microservices</name>
     <description>spring-boot-3-microservices</description>
     <modules>
-        <module>product-service</module>
 
+        <module>product-service</module>
+<!--        <module>api-gateway</module>-->
+        <module>order-service</module>
+        <module>inventory-service</module>
+<!--        <module>notification-service</module>-->
     </modules>
     <properties>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
+        <spring-cloud.version>2023.0.1</spring-cloud.version>
+<!--        <dockerPassword>${dockerPassword}</dockerPassword>-->
     </properties>
     <dependencies>
         <dependency>
@@ -32,6 +38,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>

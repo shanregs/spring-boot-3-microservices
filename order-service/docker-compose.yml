@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8.3.0
+    container_name: mysql-order-service
+    ports:
+      - "3336:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+    volumes:
+      - /c/docker/data/spboot-ms/mysql-order:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+
+#      - /d/me/learn/springboot/microservices/YT-programming-techie/practise/spring-boot-3-microservices-course/spring-boot-3-microservices/mongodb-volume:/data/db

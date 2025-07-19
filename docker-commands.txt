@@ -1,0 +1,25 @@
+Product Service
+===============
+cd D:\me\learn\springboot\microservices\YT-programming-techie\practise\spring-boot-3-microservices-course\spring-boot-3-microservices\product-service
+
+docker-compose up -d
+docker-compose down
+
+
+docker exec -it mongodb mongosh
+
+
+Order Service
+===============
+
+cd D:\me\learn\springboot\microservices\YT-programming-techie\practise\spring-boot-3-microservices-course\spring-boot-3-microservices\order-service
+docker-compose up -d
+docker-compose down
+
+
+D:\me\learn\springboot\microservices\YT-programming-techie\practise\spring-boot-3-microservices-course\spring-boot-3-microservices\product-service>docker ps
+CONTAINER ID   IMAGE         COMMAND                  CREATED              STATUS              PORTS                                             NAMES
+14b52b0f33e3   mysql:8.3.0   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3336->3306/tcp, [::]:3336->3306/tcp       mysql
+960af12d291d   mongo:7.0.5   "docker-entrypoint.s…"   38 minutes ago       Up 38 minutes       0.0.0.0:27017->27017/tcp, [::]:27017->27017/tcp   mongodb
+
+D:\me\learn\springboot\microservices\YT-programming-techie\practise\spring-boot-3-microservices-course\spring-boot-3-microservices\product-service>

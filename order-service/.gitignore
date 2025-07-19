@@ -3,7 +3,7 @@ target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-mongodb-volume
+
 ### STS ###
 .apt_generated
 .classpath
@@ -12,14 +12,12 @@ mongodb-volume
 .settings
 .springBeans
 .sts4-cache
-spring-boot-3-microservices.iml
+
 ### IntelliJ IDEA ###
 .idea
-#.mvn
 *.iws
 *.iml
 *.ipr
-.mvn
 
 ### NetBeans ###
 /nbproject/private/

@@ -9,4 +9,10 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: password
       MONGO_INITDB_DATABASE: product-service
     volumes:
-      - /d/me/learn/springboot/microservices/YT-programming-techie/practise/spring-boot-3-microservices-course/spring-boot-3-microservices/mongodb-volume:/data/db
+      - /c/docker/data/spboot-ms/mongo-product:/data/db
+
+
+
+
+#      - /d/me/learn/springboot/microservices/YT-programming-techie/practise/spring-boot-3-microservices-course/spring-boot-3-microservices/mongodb-volume:/data/db
+#        C:\docker\data\spboot-ms\mongodb
