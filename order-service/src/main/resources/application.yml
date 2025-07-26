@@ -14,10 +14,16 @@ spring:
     hibernate:
       ddl-auto: none
 
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+
 inventory:
   check:
     endpoint: /api/inventory
-  url: http://localhost:8082
+  url: http://localhost:8083
 
 #spring.application.name=order-service
 #
